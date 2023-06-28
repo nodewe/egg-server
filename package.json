@@ -1,0 +1,67 @@
+{
+  "name": "server2",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "ali-oss": "^6.17.1",
+    "cos-nodejs-sdk-v5": "^2.12.1",
+    "dayjs": "^1.11.8",
+    "egg": "^3",
+    "egg-mysql": "^4.0.0",
+    "egg-router-group": "^1.1.0",
+    "egg-scripts": "^2",
+    "egg-socket.io": "^4.1.6",
+    "egg-websocket-plugin": "^3.0.0-beta.0",
+    "formidable": "^3.4.0",
+    "jsonwebtoken": "^9.0.0",
+    "mz": "^2.7.0",
+    "node-rsa": "^1.1.1",
+    "svg-captcha": "^1.4.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^5",
+    "egg-ci": "^2",
+    "egg-mock": "^5",
+    "eslint": "^8",
+    "eslint-config-egg": "^12"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-server2",
+    "stop": "egg-scripts stop --title=egg-server-server2",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov"
+  },
+  "ci": {
+    "version": "16, 18",
+    "type": "github"
+  },
+  "bin": "entry.js",
+  "pkg": {
+    "scripts": [
+      "./app/**/*.js",
+      "./config/**/*.js"
+    ],
+    "assets": [
+      "./app/public/**/*",
+      "./node_modules/nanoid/**/*.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Math",
+  "license": "MIT"
+}
