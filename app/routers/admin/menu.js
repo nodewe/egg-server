@@ -12,7 +12,7 @@ module.exports = app => {
       getMenuTreeList,
       getMenuOption,
       getMenuInfo
-    } = controller.menu.menu;
+    } = controller.admin.menu.menu;
     // 菜单路由列表
     router.get('/menus/routes', jwt, getMenuRouteList);
     // 获取菜单 参数形式的列表

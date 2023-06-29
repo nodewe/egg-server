@@ -6,8 +6,8 @@ const {
 } = require('../../utils/util');
 
 let fs = require('mz/fs');
-const AliOss = require('./ali.oss.config');
-const TencentCos = require('./tencent.oss.config');
+const AliOss = require('../../utils/ali.oss.config');
+const TencentCos = require('../../utils/tencent.oss.config');
 
 // 上传文件
 class UploadController extends Controller {

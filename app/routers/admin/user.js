@@ -12,7 +12,7 @@ module.exports = app => {
       getMeInfo,
       getUserInfoById,
       resetPassword
-    } = controller.user.user;
+    } = controller.admin.user.user;
     // 登录接口
     router.post('/auth/login', login);
     // router.post('/register', register)

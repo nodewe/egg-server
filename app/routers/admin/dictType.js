@@ -10,7 +10,7 @@ module.exports = app => {
       delDictType,
       getDictTypeList,
       getDictTypeInfo,
-    } = controller.dict.dictType;
+    } = controller.admin.dict.dictType;
 
         // 添加字典类型
         router.post('/dict/types',jwt,addDictType);

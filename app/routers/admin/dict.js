@@ -10,7 +10,7 @@ module.exports = app => {
           delDict,
           getDictList,
           getDictInfo
-        } = controller.dict.dict;
+        } = controller.admin.dict.dict;
 
 
         // 添加字典

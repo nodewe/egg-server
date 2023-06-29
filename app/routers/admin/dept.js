@@ -14,7 +14,7 @@ module.exports = app => {
       getDeptTreeList,
       getDeptOptions,
       getMenuInfo
-    } = controller.dept.dept;
+    } = controller.admin.dept.dept;
     //获取菜单的树形列表
     router.get('/dept', jwt, getDeptTreeList);
     //获取菜单的详情

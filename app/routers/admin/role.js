@@ -12,7 +12,7 @@ module.exports = app => {
       getRoleList,
       getMenuIdByRoleId,
       putRole
-    } = controller.role.role;
+    } = controller.admin.role.role;
     //  获取角色列表分页
     router.get('/roles/page', jwt, getRoleList);
     // 根据角色id 获取对应的菜单ids
