@@ -2,10 +2,18 @@ const {Controller} = require('egg');
 //验证码的库
 const svgCaptcha = require('svg-captcha');
 //工具类相关
+//邮箱验证码
+// const nodemailer = require('./nodemailer')
+
+//阿里云短信验证码
+const AliSMS = require('./all.sms')
+
+// 腾讯云短信验证码
+const tencentSMS = require('./tencent.sms')
+
 module.exports = class UtilController extends Controller{
-       //验证码的实现
+   //图形验证码的实现
   async captcha() {
-    // console.log(1111)
     const captcha = svgCaptcha.createMathExpr({
         width:115,
         height:48,
@@ -19,5 +27,28 @@ module.exports = class UtilController extends Controller{
         data:captcha.data,
         msg:'操作成功'
     }
+  }
+
+  //邮箱验证码的实现
+  async emailVerify(){
+  //   const send = {
+  //     // 发件人
+  //     from: '<你自己的163邮箱@163.com>',
+  //     // 主题
+  //     subject: '接受凭证',//邮箱主题
+  //     // 收件人
+  //     to:email,//前台传过来的邮箱
+  //     // 邮件内容，html格式
+  //     text: '用'+code+'作为你的验证码'//发送验证码
+  // }
+  //   await  nodemailer(send)
+   
+  }
+
+  //短信验证码
+  async smsVerify(){
+      // await AliSMS()
+
+      // await tencentSMS()
   }
 }

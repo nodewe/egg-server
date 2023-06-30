@@ -7,7 +7,9 @@
     "declarations": true
   },
   "dependencies": {
+    "@alicloud/sms-sdk": "^1.1.6",
     "ali-oss": "^6.17.1",
+    "axios": "^1.4.0",
     "cos-nodejs-sdk-v5": "^2.12.1",
     "dayjs": "^1.11.8",
     "egg": "^3",
@@ -20,6 +22,9 @@
     "jsonwebtoken": "^9.0.0",
     "mz": "^2.7.0",
     "node-rsa": "^1.1.1",
+    "nodemailer": "^6.9.3",
+    "qcloudsms_js": "^0.1.1",
+    "querystringify": "^2.2.0",
     "svg-captcha": "^1.4.0"
   },
   "devDependencies": {
