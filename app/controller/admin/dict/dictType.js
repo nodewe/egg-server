@@ -1,7 +1,7 @@
 const {
   Controller,
 } = require('egg');
-const { buildTree } = require('../../utils/util');
+const { buildTree } = require('../../../utils/util');
 
 // 字典模块
 class DictController extends Controller {

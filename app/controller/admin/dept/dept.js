@@ -1,7 +1,7 @@
 const {
   Controller,
 } = require('egg');
-const { buildTree, convertKeysToSnakeCase, convertKeysToCamelCase, DayJS } = require('../../utils/util');
+const { buildTree, convertKeysToSnakeCase, convertKeysToCamelCase, DayJS } = require('../../../utils/util');
 
 // 部门表
 class DeptController extends Controller {

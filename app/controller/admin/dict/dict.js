@@ -1,7 +1,7 @@
 const {
   Controller,
 } = require('egg');
-const { convertKeysToSnakeCase, convertKeysToCamelCase, DayJS } = require('../../utils/util');
+const { convertKeysToSnakeCase, convertKeysToCamelCase, DayJS } = require('../../../utils/util');
 
 // 字典模块
 class DictController extends Controller {

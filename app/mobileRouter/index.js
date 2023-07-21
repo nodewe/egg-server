@@ -1,5 +1,5 @@
 
 
-modules.exports = app=>{
-    
+module.exports = app=>{
+    app.env
 }

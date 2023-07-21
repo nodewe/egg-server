@@ -44,4 +44,4 @@ async function payAction(total) {
     return res
 }
 
-modules.exports = payAction
+module.exports = payAction

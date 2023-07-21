@@ -1,7 +1,7 @@
 const {
   Controller,
 } = require('egg');
-const { convertKeysToSnakeCase } = require('../../utils/util');
+const { convertKeysToSnakeCase } = require('../../../utils/util');
 
 // 角色模块
 class RoleController extends Controller {

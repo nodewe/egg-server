@@ -3,7 +3,7 @@ const {
 } = require('egg');
 
 const jwt = require('jsonwebtoken');
-const { encrypt } = require('../../utils/jsencrypt');
+const { encrypt } = require('../../../utils/jsencrypt');
 const formatToHump = value => {
   return value.replace(/\_(\w)/g, (_, letter) => letter.toUpperCase());
 };
@@ -16,9 +16,21 @@ class UserController extends Controller {
     const {
       app,
     } = this;
+    //是否是win端标记
+    const isWin = this.ctx.request.headers.iswin
     const captcha = this.ctx.session.captcha;
-    // 验证码相等
-    if (body.verifyCode == captcha) {
+    //如果不是window端
+    if(!isWin){
+         // 验证码不相等相等
+      if(body.verifyCode !=captcha){
+        return this.ctx.body = {
+          code: 500,
+          msg: '验证码错误',
+        };
+      }
+    }
+ 
+ 
       // 如果 数据库中密码和用户名相等就返accessToken
       try {
         //如果开启了加密模式
@@ -60,12 +72,8 @@ class UserController extends Controller {
       }
 
 
-    }
-    // this.ctx.status = 500;
-    return this.ctx.body = {
-      code: 500,
-      msg: '验证码错误',
-    };
+    
+   
   }
 
   // 添加用户
