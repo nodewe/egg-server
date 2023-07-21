@@ -54,7 +54,7 @@ class MenuController extends Controller {
 
   // 修改菜单信息
   async putMenu() {
-    const body = this.ctx.request.body;
+    let body = this.ctx.request.body;
     body = convertKeysToSnakeCase(body)
     const types = {
       'CATALOG':1,
