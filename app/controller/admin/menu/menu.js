@@ -1,7 +1,7 @@
 const {
   Controller,
 } = require('egg');
-const { buildTree, convertKeysToSnakeCase, convertKeysToCamelCase } = require('../../../utils/util');
+const { buildTree, convertKeysToSnakeCase, convertKeysToCamelCase,DayJS } = require('../../../utils/util');
 
 // 菜单模块
 class MenuController extends Controller {
@@ -76,6 +76,7 @@ class MenuController extends Controller {
         body.tree_path = tree_path
       }
       body.update_time = DayJS().format('YYYY-MM-DD HH:mm:ss')
+      delete body.create_time;
       const res = await conn.update('sys_menu',body,{
         where:{
           id:body.id
