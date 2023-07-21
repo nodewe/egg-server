@@ -1,5 +1,5 @@
 /* eslint valid-jsdoc: "off" */
-
+const path = require('path')
 'use strict';
 /**
  * @param {Egg.EggAppInfo} appInfo app info
