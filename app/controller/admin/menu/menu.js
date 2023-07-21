@@ -1,7 +1,7 @@
 const {
   Controller,
 } = require('egg');
-const { buildTree, convertKeysToSnakeCase, convertKeysToCamelCase } = require('../../../utils/util');
+const { buildTree, convertKeysToSnakeCase, convertKeysToCamelCase,DayJS } = require('../../../utils/util');
 
 // 菜单模块
 class MenuController extends Controller {
