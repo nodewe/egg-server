@@ -76,6 +76,7 @@ class MenuController extends Controller {
         body.tree_path = tree_path
       }
       body.update_time = DayJS().format('YYYY-MM-DD HH:mm:ss')
+      delete body.create_time;
       const res = await conn.update('sys_menu',body,{
         where:{
           id:body.id
