@@ -7,7 +7,7 @@ const { convertKeysToSnakeCase, convertKeysToCamelCase, DayJS } = require('../..
 class DictController extends Controller {
   // 添加 字典
   async addDict() {
-    const body = this.ctx.request.body;
+    let body = this.ctx.request.body;
   
     body = convertKeysToSnakeCase(body)
     body.create_time = DayJS().format('YYYY-MM-DD HH:mm:ss')
