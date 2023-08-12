@@ -75,7 +75,7 @@ class DictController extends Controller {
     let pageSize = query.pageSize || 10;
     let pageNum = query.pageNum || 1;
     // 
-    const name = query.name || '';
+    const name = query.name || '[\s\S]*';
     const typeCode = query.typeCode || '';
     // 分页参数
     pageSize = Number(pageSize);

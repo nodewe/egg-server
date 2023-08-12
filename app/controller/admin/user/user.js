@@ -199,7 +199,7 @@ class UserController extends Controller {
     let pageSize = query.pageSize || 10;
     let pageNum = query.pageNum || 1;
     // 关键字 查询 用户名 昵称 手机号
-    const keywords = query.keywords || '';
+    const keywords = query.keywords || '[\s\S]*';
     const deptId = query.deptId || '';
     // 分页参数
     pageSize = Number(pageSize);

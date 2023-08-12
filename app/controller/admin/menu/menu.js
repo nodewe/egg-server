@@ -191,7 +191,7 @@ class MenuController extends Controller {
   // 获取菜单树形列表
   async getMenuTreeList() {
     const query = this.ctx.request.query;
-    let keywords = query.keywords || '';
+    let keywords = query.keywords || '[\s\S]*';
     //                          目录  菜单      外链   按钮
     const types = [ '', 'CATALOG', 'MENU', 'EXTLINK', 'BUTTON' ];
     let menuList = await this.app.mysql.query(

@@ -144,8 +144,7 @@ class DeptController extends Controller {
   // 获取部门树形列表
   async getDeptTreeList() {
     const query = this.ctx.request.query;
-    let keywords = query.keywords || ''
-    console.log(keywords,'key');
+    let keywords = query.keywords || '[\s\S]*'
     let deptList = await this.app.mysql.query(
       `select * from sys_dept where name REGEXP(?)`,
       [keywords]

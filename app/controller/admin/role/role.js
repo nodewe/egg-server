@@ -114,7 +114,7 @@ class RoleController extends Controller {
     let pageSize = query.pageSize;
     let pageNum = query.pageNum;
     // 角色名字
-    const keywords = query.keywords || '';
+    const keywords = query.keywords || '[\s\S]*';
     // 分页参数
     pageSize = Number(pageSize);
     pageNum = Number(pageNum);
