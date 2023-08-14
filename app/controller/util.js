@@ -24,7 +24,7 @@ module.exports = class UtilController extends Controller {
     });
     //是否是win端标记
     const isWin = this.ctx.request.headers.iswin
-    this.ctx.session.session = captcha.text
+    this.ctx.session.captcha = captcha.text
     const body = {
       code: 200,
       captchaEnabled: true,
